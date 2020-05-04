@@ -1,0 +1,381 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="dk" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="dk" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>fireapi.firedb module &mdash; FIRE 0.3.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="prev" title="fireapi.model.sagstyper module" href="fireapi.model.sagstyper.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> FIRE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installationsvejledning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../for_udviklere.html">Udviklingsguide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Kommandolinjeprogrammer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">FIRE API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">FIRE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">FIRE API Reference</a> &raquo;</li>
+        
+          <li><a href="fireapi.html">fire package</a> &raquo;</li>
+        
+      <li>fireapi.firedb module</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/fireapi.firedb.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="module-fire.api.firedb">
+<span id="fireapi-firedb-module"></span><h1>fireapi.firedb module<a class="headerlink" href="#module-fire.api.firedb" title="Permalink to this headline">¶</a></h1>
+<dl class="class">
+<dt id="fire.api.firedb.FireDb">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.firedb.</code><code class="sig-name descname">FireDb</code><span class="sig-paren">(</span><em class="sig-param">connectionstring</em>, <em class="sig-param">debug=False</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.hent_alle_punkter">
+<code class="sig-name descname">hent_alle_punkter</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[fire.api.model.punkttyper.Punkt]<a class="headerlink" href="#fire.api.firedb.FireDb.hent_alle_punkter" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.hent_alle_sager">
+<code class="sig-name descname">hent_alle_sager</code><span class="sig-paren">(</span><span class="sig-paren">)</span> &#x2192; List[fire.api.model.sagstyper.Sag]<a class="headerlink" href="#fire.api.firedb.FireDb.hent_alle_sager" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.hent_geometri_objekt">
+<code class="sig-name descname">hent_geometri_objekt</code><span class="sig-paren">(</span><em class="sig-param">punktid: str</em><span class="sig-paren">)</span> &#x2192; fire.api.model.punkttyper.GeometriObjekt<a class="headerlink" href="#fire.api.firedb.FireDb.hent_geometri_objekt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.hent_observationer">
+<code class="sig-name descname">hent_observationer</code><span class="sig-paren">(</span><em class="sig-param">objectids: List[int]</em><span class="sig-paren">)</span> &#x2192; List[fire.api.model.punkttyper.Observation]<a class="headerlink" href="#fire.api.firedb.FireDb.hent_observationer" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.hent_observationer_naer_geometri">
+<code class="sig-name descname">hent_observationer_naer_geometri</code><span class="sig-paren">(</span><em class="sig-param">geometri: fire.api.model.geometry.Geometry</em>, <em class="sig-param">afstand: float</em>, <em class="sig-param">tidfra: Optional[datetime.datetime] = None</em>, <em class="sig-param">tidtil: Optional[datetime.datetime] = None</em><span class="sig-paren">)</span> &#x2192; List[fire.api.model.punkttyper.Observation]<a class="headerlink" href="#fire.api.firedb.FireDb.hent_observationer_naer_geometri" title="Permalink to this definition">¶</a></dt>
+<dd><dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>geometri</strong> -- Either a WKT string or a Geometry instance which will be used as
+filter to identify the set of spatial objects that are within some
+specified distance of the given object.</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.hent_observationer_naer_opstillingspunkt">
+<code class="sig-name descname">hent_observationer_naer_opstillingspunkt</code><span class="sig-paren">(</span><em class="sig-param">punkt: fire.api.model.punkttyper.Punkt</em>, <em class="sig-param">afstand: float</em>, <em class="sig-param">tidfra: Optional[datetime.datetime] = None</em>, <em class="sig-param">tidtil: Optional[datetime.datetime] = None</em><span class="sig-paren">)</span> &#x2192; List[fire.api.model.punkttyper.Observation]<a class="headerlink" href="#fire.api.firedb.FireDb.hent_observationer_naer_opstillingspunkt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.hent_observationtype">
+<code class="sig-name descname">hent_observationtype</code><span class="sig-paren">(</span><em class="sig-param">name: str</em><span class="sig-paren">)</span> &#x2192; fire.api.model.punkttyper.ObservationType<a class="headerlink" href="#fire.api.firedb.FireDb.hent_observationtype" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets ObservationType by its name.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>observationstypeid</strong> (<em>str</em>) -- Name (including namespace) of the observationtype.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>The first ObservationType matching the specified name. None if not found.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="fireapi.model.punkttyper.html#fire.api.model.punkttyper.ObservationType" title="fire.api.model.punkttyper.ObservationType">ObservationType</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.hent_observationtyper">
+<code class="sig-name descname">hent_observationtyper</code><span class="sig-paren">(</span><em class="sig-param">namespace: Optional[str] = None</em><span class="sig-paren">)</span> &#x2192; List[fire.api.model.punkttyper.ObservationType]<a class="headerlink" href="#fire.api.firedb.FireDb.hent_observationtyper" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets all ObservationTyper optionally filtered by namespace.</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.hent_punkt">
+<code class="sig-name descname">hent_punkt</code><span class="sig-paren">(</span><em class="sig-param">punktid: str</em><span class="sig-paren">)</span> &#x2192; fire.api.model.punkttyper.Punkt<a class="headerlink" href="#fire.api.firedb.FireDb.hent_punkt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.hent_punktinformationtype">
+<code class="sig-name descname">hent_punktinformationtype</code><span class="sig-paren">(</span><em class="sig-param">infotype: str</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.hent_punktinformationtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.hent_punktinformationtyper">
+<code class="sig-name descname">hent_punktinformationtyper</code><span class="sig-paren">(</span><em class="sig-param">namespace: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.hent_punktinformationtyper" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.hent_sag">
+<code class="sig-name descname">hent_sag</code><span class="sig-paren">(</span><em class="sig-param">sagid: str</em><span class="sig-paren">)</span> &#x2192; fire.api.model.sagstyper.Sag<a class="headerlink" href="#fire.api.firedb.FireDb.hent_sag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.hent_srid">
+<code class="sig-name descname">hent_srid</code><span class="sig-paren">(</span><em class="sig-param">sridid: str</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.hent_srid" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets a Srid object by its id.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>sridid</strong> (<em>str</em>) -- srid id string. For instance &quot;EPSG:25832&quot;</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p>Srid object with the specified id. None if not found.</p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p><a class="reference internal" href="fireapi.model.punkttyper.html#fire.api.model.punkttyper.Srid" title="fire.api.model.punkttyper.Srid">Srid</a></p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.hent_srider">
+<code class="sig-name descname">hent_srider</code><span class="sig-paren">(</span><em class="sig-param">namespace: Optional[str] = None</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.hent_srider" title="Permalink to this definition">¶</a></dt>
+<dd><p>Gets Srid objects. Optionally filtering by srid namespace</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><p><strong>namespace</strong> (<em>str - optional</em>) -- Return only Srids with the specified namespace. For instance &quot;EPSG&quot;. If not specified all objects are returned.</p>
+</dd>
+<dt class="field-even">Returns</dt>
+<dd class="field-even"><p></p>
+</dd>
+<dt class="field-odd">Return type</dt>
+<dd class="field-odd"><p>List of Srid</p>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.indset_beregning">
+<code class="sig-name descname">indset_beregning</code><span class="sig-paren">(</span><em class="sig-param">sagsevent: fire.api.model.sagstyper.Sagsevent</em>, <em class="sig-param">beregning: fire.api.model.punkttyper.Beregning</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.indset_beregning" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.indset_observation">
+<code class="sig-name descname">indset_observation</code><span class="sig-paren">(</span><em class="sig-param">sagsevent: fire.api.model.sagstyper.Sagsevent</em>, <em class="sig-param">observation: fire.api.model.punkttyper.Observation</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.indset_observation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.indset_observationtype">
+<code class="sig-name descname">indset_observationtype</code><span class="sig-paren">(</span><em class="sig-param">observationtype: fire.api.model.punkttyper.ObservationType</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.indset_observationtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.indset_punkt">
+<code class="sig-name descname">indset_punkt</code><span class="sig-paren">(</span><em class="sig-param">sagsevent: fire.api.model.sagstyper.Sagsevent</em>, <em class="sig-param">punkt: fire.api.model.punkttyper.Punkt</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.indset_punkt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.indset_punktinformation">
+<code class="sig-name descname">indset_punktinformation</code><span class="sig-paren">(</span><em class="sig-param">sagsevent: fire.api.model.sagstyper.Sagsevent</em>, <em class="sig-param">punktinformation: fire.api.model.punkttyper.PunktInformation</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.indset_punktinformation" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.indset_punktinformationtype">
+<code class="sig-name descname">indset_punktinformationtype</code><span class="sig-paren">(</span><em class="sig-param">punktinfotype: fire.api.model.punkttyper.PunktInformationType</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.indset_punktinformationtype" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.indset_sag">
+<code class="sig-name descname">indset_sag</code><span class="sig-paren">(</span><em class="sig-param">sag: fire.api.model.sagstyper.Sag</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.indset_sag" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.indset_sagsevent">
+<code class="sig-name descname">indset_sagsevent</code><span class="sig-paren">(</span><em class="sig-param">sagsevent: fire.api.model.sagstyper.Sagsevent</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.indset_sagsevent" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.indset_srid">
+<code class="sig-name descname">indset_srid</code><span class="sig-paren">(</span><em class="sig-param">srid: fire.api.model.punkttyper.Srid</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.firedb.FireDb.indset_srid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.firedb.FireDb.soeg_geometriobjekt">
+<code class="sig-name descname">soeg_geometriobjekt</code><span class="sig-paren">(</span><em class="sig-param">bbox</em><span class="sig-paren">)</span> &#x2192; List[fire.api.model.punkttyper.GeometriObjekt]<a class="headerlink" href="#fire.api.firedb.FireDb.soeg_geometriobjekt" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="fireapi.model.sagstyper.html" class="btn btn-neutral float-left" title="fireapi.model.sagstyper module" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Asger Sigurd Skovbo Petersen, Björn Harrtell, Kristian Evers
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

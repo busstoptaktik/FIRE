@@ -1,0 +1,340 @@
+
+
+<!DOCTYPE html>
+<!--[if IE 8]><html class="no-js lt-ie9" lang="dk" > <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js" lang="dk" > <!--<![endif]-->
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>fireapi.model package &mdash; FIRE 0.3.0 documentation</title>
+  
+
+  
+  
+  
+  
+
+  
+  <script type="text/javascript" src="../_static/js/modernizr.min.js"></script>
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="fireapi.model.columntypes module" href="fireapi.model.columntypes.html" />
+    <link rel="prev" title="fire package" href="fireapi.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../index.html" class="icon icon-home"> FIRE
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                0.3.0
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <p class="caption"><span class="caption-text">Contents:</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation.html">Installationsvejledning</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../for_udviklere.html">Udviklingsguide</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../apps/index.html">Kommandolinjeprogrammer</a></li>
+<li class="toctree-l1"><a class="reference internal" href="index.html">FIRE API Reference</a></li>
+</ul>
+
+            
+          
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">FIRE</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../index.html">Docs</a> &raquo;</li>
+        
+          <li><a href="index.html">FIRE API Reference</a> &raquo;</li>
+        
+          <li><a href="fireapi.html">fire package</a> &raquo;</li>
+        
+      <li>fireapi.model package</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="../_sources/api/fireapi.model.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="fireapi-model-package">
+<h1>fireapi.model package<a class="headerlink" href="#fireapi-model-package" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="submodules">
+<h2>Submodules<a class="headerlink" href="#submodules" title="Permalink to this headline">¶</a></h2>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="fireapi.model.columntypes.html">fireapi.model.columntypes module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fireapi.model.geometry.html">fireapi.model.geometry module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fireapi.model.punkttyper.html">fireapi.model.punkttyper module</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fireapi.model.sagstyper.html">fireapi.model.sagstyper module</a></li>
+</ul>
+</div>
+</div>
+<div class="section" id="module-fire.api.model">
+<span id="module-contents"></span><h2>Module contents<a class="headerlink" href="#module-fire.api.model" title="Permalink to this headline">¶</a></h2>
+<p>SQLAlchemy models for the application</p>
+<dl class="class">
+<dt id="fire.api.model.IntEnum">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.</code><code class="sig-name descname">IntEnum</code><span class="sig-paren">(</span><em class="sig-param">enumtype</em>, <em class="sig-param">*args</em>, <em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.IntEnum" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.type_api.TypeDecorator</span></code></p>
+<p>Add an integer enum class</p>
+<dl class="attribute">
+<dt id="fire.api.model.IntEnum.impl">
+<code class="sig-name descname">impl</code><a class="headerlink" href="#fire.api.model.IntEnum.impl" title="Permalink to this definition">¶</a></dt>
+<dd><p>alias of <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.sql.sqltypes.Integer</span></code></p>
+</dd></dl>
+
+<dl class="method">
+<dt id="fire.api.model.IntEnum.process_bind_param">
+<code class="sig-name descname">process_bind_param</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">dialect</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.IntEnum.process_bind_param" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive a bound parameter value to be converted.</p>
+<p>Subclasses override this method to return the
+value that should be passed along to the underlying
+<code class="xref py py-class docutils literal notranslate"><span class="pre">TypeEngine</span></code> object, and from there to the
+DBAPI <code class="docutils literal notranslate"><span class="pre">execute()</span></code> method.</p>
+<p>The operation could be anything desired to perform custom
+behavior, such as transforming or serializing data.
+This could also be used as a hook for validating logic.</p>
+<p>This operation should be designed with the reverse operation
+in mind, which would be the process_result_value method of
+this class.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> -- Data to operate upon, of any type expected by
+this method in the subclass.  Can be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>dialect</strong> -- the <code class="xref py py-class docutils literal notranslate"><span class="pre">Dialect</span></code> in use.</p></li>
+</ul>
+</dd>
+</dl>
+</dd></dl>
+
+<dl class="method">
+<dt id="fire.api.model.IntEnum.process_result_value">
+<code class="sig-name descname">process_result_value</code><span class="sig-paren">(</span><em class="sig-param">value</em>, <em class="sig-param">dialect</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.IntEnum.process_result_value" title="Permalink to this definition">¶</a></dt>
+<dd><p>Receive a result-row column value to be converted.</p>
+<p>Subclasses should implement this method to operate on data
+fetched from the database.</p>
+<p>Subclasses override this method to return the
+value that should be passed back to the application,
+given a value that is already processed by
+the underlying <code class="xref py py-class docutils literal notranslate"><span class="pre">TypeEngine</span></code> object, originally
+from the DBAPI cursor method <code class="docutils literal notranslate"><span class="pre">fetchone()</span></code> or similar.</p>
+<p>The operation could be anything desired to perform custom
+behavior, such as transforming or serializing data.
+This could also be used as a hook for validating logic.</p>
+<dl class="field-list simple">
+<dt class="field-odd">Parameters</dt>
+<dd class="field-odd"><ul class="simple">
+<li><p><strong>value</strong> -- Data to operate upon, of any type expected by
+this method in the subclass.  Can be <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p></li>
+<li><p><strong>dialect</strong> -- the <code class="xref py py-class docutils literal notranslate"><span class="pre">Dialect</span></code> in use.</p></li>
+</ul>
+</dd>
+</dl>
+<p>This operation should be designed to be reversible by
+the &quot;process_bind_param&quot; method of this class.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="fire.api.model.RegisteringFraObjekt">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.</code><code class="sig-name descname">RegisteringFraObjekt</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.RegisteringFraObjekt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></code></p>
+<dl class="attribute">
+<dt id="fire.api.model.RegisteringFraObjekt.objectid">
+<code class="sig-name descname">objectid</code><em class="property"> = Column(None, Integer(), table=None, primary_key=True, nullable=False)</em><a class="headerlink" href="#fire.api.model.RegisteringFraObjekt.objectid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.model.RegisteringFraObjekt.registreringfra">
+<em class="property">property </em><code class="sig-name descname">registreringfra</code><a class="headerlink" href="#fire.api.model.RegisteringFraObjekt.registreringfra" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="fire.api.model.RegisteringTidObjekt">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.</code><code class="sig-name descname">RegisteringTidObjekt</code><span class="sig-paren">(</span><em class="sig-param">**kwargs</em><span class="sig-paren">)</span><a class="headerlink" href="#fire.api.model.RegisteringTidObjekt" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">sqlalchemy.ext.declarative.api.Base</span></code></p>
+<dl class="attribute">
+<dt id="fire.api.model.RegisteringTidObjekt.objectid">
+<code class="sig-name descname">objectid</code><em class="property"> = Column(None, Integer(), table=None, primary_key=True, nullable=False)</em><a class="headerlink" href="#fire.api.model.RegisteringTidObjekt.objectid" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.model.RegisteringTidObjekt.registreringfra">
+<em class="property">property </em><code class="sig-name descname">registreringfra</code><a class="headerlink" href="#fire.api.model.RegisteringTidObjekt.registreringfra" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="fire.api.model.RegisteringTidObjekt.registreringtil">
+<em class="property">property </em><code class="sig-name descname">registreringtil</code><a class="headerlink" href="#fire.api.model.RegisteringTidObjekt.registreringtil" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="fire.api.model.ReprBase">
+<em class="property">class </em><code class="sig-prename descclassname">fire.api.model.</code><code class="sig-name descname">ReprBase</code><a class="headerlink" href="#fire.api.model.ReprBase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<p>Extend the base class
+Provides a nicer representation when a class instance is printed.
+Found on the SA wiki</p>
+</dd></dl>
+
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="fireapi.model.columntypes.html" class="btn btn-neutral float-right" title="fireapi.model.columntypes module" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="fireapi.html" class="btn btn-neutral float-left" title="fire package" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &copy; Copyright 2019, Asger Sigurd Skovbo Petersen, Björn Harrtell, Kristian Evers
+
+    </p>
+  </div>
+  Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

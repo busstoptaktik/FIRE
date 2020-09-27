@@ -61,6 +61,7 @@ setup(
         [fire.cli.fire_commands]
         info=fire.cli.info:info
         gama=fire.cli.gama:gama
+        gnss=fire.cli.gnss:gnss
         niv=fire.cli.niv:niv
         søg=fire.cli.søg:søg
     """,

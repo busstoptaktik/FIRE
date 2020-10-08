@@ -1,7 +1,7 @@
 import sys
 from datetime import datetime
 from math import trunc, isnan
-from time import sleep
+from typing import List
 
 import click
 import pandas as pd
@@ -155,7 +155,6 @@ def ilæg_revision(
         # hvordan denne opgave kan parametriseres på en rimeligt generel måde, så den kan
         # udstilles i et "højniveau-API"
         srid = firedb.hent_srid(r["Attribut"].upper())
-        registreringstidspunkt = func.current_timestamp()
         sagsevent = Sagsevent(
             sag=sag, id=uuid(), eventtype=EventType.KOORDINAT_BEREGNET
         )
@@ -194,7 +193,7 @@ def ilæg_revision(
         til_registrering.append(koordinat)
 
     n = len(opdaterede_punkter)
-    if n > 0:
+    if n:
         punktnavne = sorted(list(set(opdaterede_punkter)))
         if len(punktnavne) > 10:
             punktnavne[9] = "..."
@@ -331,8 +330,8 @@ def ilæg_revision(
 
                 til_opret.append(pi)
                 punkter_med_oprettelse.add(ident)
-                if alvor:
-                    firedb.indset_punktinformation(opret(sag, punkt.ident, pitnavn), pi)
+                #if alvor:
+                #    firedb.indset_punktinformation(opret(sag, punkt.ident, pitnavn), pi)
                 continue
 
             # Ingen ændringer? - så afslutter vi og går til næste element.
@@ -357,8 +356,8 @@ def ilæg_revision(
                 fire.cli.print(f"    Slukker: {pitnavn}")
                 til_sluk.append(pi)
                 punkter_med_slukning.add(punkt.ident)
-                if alvor:
-                    firedb.luk_punktinfo(pi, sluk(sag, punkt.ident, pitnavn))
+                # if alvor:
+                #    firedb.luk_punktinfo(pi, sluk(sag, punkt.ident, pitnavn))
                 continue
 
             fire.cli.print(f"    Retter punktinfo-element: {pitnavn}")
@@ -379,9 +378,10 @@ def ilæg_revision(
                 pi = PunktInformation(infotype=pit, punkt=punkt, tal=tal)
             til_ret.append(pi)
             punkter_med_rettelse.add(punkt.ident)
-            if alvor:
-                firedb.indset_punktinformation(ret(sag, punkt.ident, pitnavn), pi)
+            # if alvor:
+            #     firedb.indset_punktinformation(ret(sag, punkt.ident, pitnavn), pi)
             continue
+
     opret_tekst = f"Opretter {len(til_opret)} attributter fordelt på {len(punkter_med_oprettelse)} punkter"
     sluk_tekst = f"Slukker for {len(til_sluk)} attributter fordelt på {len(punkter_med_slukning)} punkter"
     ret_tekst = f"Retter {len(til_ret)} attributter fordelt på {len(punkter_med_rettelse)} punkter"
@@ -396,7 +396,39 @@ def ilæg_revision(
         fire.cli.print(f"    * {sluk_tekst}")
         fire.cli.print(f"    * {ret_tekst}")
         fire.cli.print(f"Ingen data lagt i FIRE-databasen", fg="yellow")
-        sys.exit(0)
+        return
+
+    # Det er her, det er alvor...
+
+    events = []
+    if len(til_ret):
+        fire.cli.print("ret")
+        se = Sagsevent(sag=sag, id=uuid(), eventtype=EventType.PUNKTINFO_TILFOEJET)
+        sagseventinfo = SagseventInfo(beskrivelse=ret_tekst)
+        se.sagseventinfos.append(sagseventinfo)
+        se.punktinformationer = til_ret
+        firedb.indset_sagsevent(se)
+        events.append(se)
+
+    if len(til_opret):
+        fire.cli.print("opret")
+        se = Sagsevent(sag=sag, id=uuid(), eventtype=EventType.PUNKTINFO_TILFOEJET)
+        sagseventinfo = SagseventInfo(beskrivelse=opret_tekst)
+        se.sagseventinfos.append(sagseventinfo)
+        se.punktinformationer = til_opret
+        firedb.indset_sagsevent(se)
+        events.append(se)
+
+    if len(til_sluk):
+        fire.cli.print("sluk")
+        se = Sagsevent(sag=sag, id=uuid(), eventtype=EventType.PUNKTINFO_FJERNET)
+        sagseventinfo = SagseventInfo(beskrivelse=sluk_tekst)
+        se.sagseventinfos.append(sagseventinfo)
+        se.punktinformationer = til_sluk
+        firedb.indset_sagsevent(se)
+        events.append(se)
+
+    return
 
 
 def opret_punkt(ident: str, lokation: str, sag: Sag):
